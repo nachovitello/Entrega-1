@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+
+}
+
+/* header y nav */
+
+.navegador{
+    padding: 15px;
+    background-color: rgb(231, 112, 112);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.navegador ul{
+    list-style-type: none;
+    display: flex;
+
+}
+.navegador ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px;
+    font-size: 20px;
+}
+.navegador .fa-bars{
+    display: none;
+}
+@media(max-width:768px){
+    .navegador .fa-bars{
+        display: block;
+        margin: 10px;
+        font-size: 40px;
+        color: black;
+    }
+    .navegador .fa-bars:hover + ul{
+        left: 0;
+    }
+    .navegador ul{
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 250px;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;    
+        align-items: center;
+        transition: 0.5s;
+        padding-top: 45px;
+    }
+    .navegador ul:hover{
+        left: 0;
+    }
+    .navegador ul li a{
+        color: black;
+    }
+}
+.titulo{
+    background-image: url(../multimedia/img/fondo.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    display: grid;
+
+}
+.titulo h1{
+    font-size: 60px;
+    text-align: center;
+    color: rgb(233, 233, 235);
+    text-decoration: underline;
+}
+
+.titulo h2{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.imagen-pagina{
+    width: 150px;
+    object-fit: cover;
+}
+/* ----------fin header y nav ------------------ */
+
+/* main   */
+.titulo-producto{
+    font-size: 50px;
+    display: grid;
+    text-align: center;
+}
+.carousel-item img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.etiqueta-productos{
+    width: 250px;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    border-color: blue;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+
+}
+.imagen-tarjeta{
+    width: 150px;
+}
+.boton{
+    background-color: blue;
+    border-radius: 5px;
+    color: aliceblue;
+    width: 200px;
+    font-size: 15px;
+
+}
+.maps{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* ---------------------fin del main--------------   */
+
+
+/*       footer     */
+
+.pie-de-pagina{
+    padding: 15px;
+    background-color:rgb(231, 112, 112);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+.pie-de-pagina .form-consulta{
+    border: 2px solid blue;
+    padding: 20px;
+    border-radius: 4px;
+    width: 350px;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.form-consulta input{
+    margin: 4px;
+    padding: 3px;
+    width: 230px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    align-items: center;
+
+}
+.pie-de-pagina .info-nosotros{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+.pie-de-pagina .redes{
+    align-items: center;
+    text-align: center;
+}
+.pie-de-pagina .titulo-redes{
+    font-size: 20px;
+}
+
+.pie-de-pagina .logo-redes{
+    font-size: 40px;
+}
+.pie-de-pagina .logo-redes i{
+    color: black;
+}
+
+@media(max-width:768px){
+    .pie-de-pagina{
+        grid-template-columns: 1fr 1fr;
+    }
+    .pie-de-pagina .redes{
+        grid-column: 1/3;
+    }
+}
+@media(max-width:576px){
+    .pie-de-pagina{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .pie-de-pagina .redes{
+        grid-column: auto;
+    }
+}
+
+.whatsapp{
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: green;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+}
+
+.whatsapp i{
+    font-size: 50px;
+    color: #fff ;
+}
